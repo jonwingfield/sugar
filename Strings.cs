@@ -376,14 +376,15 @@ public static class Inflector {
     /// <summary>
     /// Initializes the <see cref="Inflector"/> class.
     /// </summary>
-    static Inflector() {
+    static Inflector()
+    {
         AddPluralRule("$", "s");
         AddPluralRule("s$", "s");
         AddPluralRule("(ax|test)is$", "$1es");
-        AddPluralRule("(octop|vir)us$", "$1i");
+        AddPluralRule("(octop|vir|alumn|nucle|foc|radi|syllab|fung|hippopotam|uter)us$", "$1i");
         AddPluralRule("(alias|status)$", "$1es");
         AddPluralRule("(bu)s$", "$1ses");
-        AddPluralRule("(buffal|tomat)o$", "$1oes");
+        AddPluralRule("(buffal|tomat|her|potat)o$", "$1oes");
         AddPluralRule("([ti])um$", "$1a");
         AddPluralRule("sis$", "ses");
         AddPluralRule("(?:([^f])fe|([lr])f)$", "$1$2ves");
@@ -394,6 +395,8 @@ public static class Inflector {
         AddPluralRule("([m|l])ouse$", "$1ice");
         AddPluralRule("^(ox)$", "$1en");
         AddPluralRule("(quiz)$", "$1zes");
+        AddPluralRule("(criteri|automat|phenomen|polyhedr)on$", "$1a");
+        AddPluralRule("^(di)e$", "$1ce");
 
         AddSingularRule("s$", String.Empty);
         AddSingularRule("ss$", "ss");
@@ -421,6 +424,7 @@ public static class Inflector {
         AddSingularRule("(vert|ind)ices$", "$1ex");
         AddSingularRule("(matr)ices$", "$1ix");
         AddSingularRule("(quiz)zes$", "$1");
+        AddSingularRule("^(pen)ce$", "$1ny");
 
         AddIrregularRule("person", "people");
         AddIrregularRule("man", "men");
@@ -428,6 +432,11 @@ public static class Inflector {
         AddIrregularRule("sex", "sexes");
         AddIrregularRule("tax", "taxes");
         AddIrregularRule("move", "moves");
+        AddIrregularRule("goose", "geese");
+        AddIrregularRule("leaf", "leaves");
+        AddIrregularRule("foot", "feet");
+        AddIrregularRule("tooth", "teeth");
+
 
         AddUnknownCountRule("equipment");
         AddUnknownCountRule("information");
@@ -437,6 +446,23 @@ public static class Inflector {
         AddUnknownCountRule("series");
         AddUnknownCountRule("fish");
         AddUnknownCountRule("sheep");
+        AddUnknownCountRule("moose");
+        AddUnknownCountRule("deer");
+        AddUnknownCountRule("aircraft");
+        AddUnknownCountRule("shrimp");
+        AddUnknownCountRule("you");
+        AddUnknownCountRule("pants");
+        AddUnknownCountRule("shorts");
+        AddUnknownCountRule("eyeglasses");
+        AddUnknownCountRule("scissors");
+        AddUnknownCountRule("offspring");
+        AddUnknownCountRule("species");
+        AddUnknownCountRule("elk");
+        AddUnknownCountRule("kudos");
+        AddUnknownCountRule("corps");
+        AddUnknownCountRule("salmon");
+        AddUnknownCountRule("bison");
+        AddUnknownCountRule("swine");
     }
 
     /// <summary>
