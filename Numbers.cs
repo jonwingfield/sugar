@@ -18,7 +18,7 @@ namespace Faker.Extensions
             }
             else
             {
-                for (int i = to; i >= from; i--)
+                for (int i = from; i >= to; i--)
                 {
                     yield return i;
                 }
